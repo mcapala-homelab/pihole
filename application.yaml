@@ -10,7 +10,7 @@ spec:
   project: default
   sources:
   - repoURL: 'https://github.com/mcapala-homelab/pihole.git'
-    targetRevision: HEAD
+    targetRevision: master
     ref: values
   - repoURL: 'https://mojo2600.github.io/pihole-kubernetes'
     chart: pihole
