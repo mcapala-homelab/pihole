@@ -1,0 +1,37 @@
+DNS1: "1.1.1.1"
+DNS2: "1.0.0.1"
+
+privileged: true
+hostNetwork: true
+hostname: "hole"
+webHttp: "18080"
+webHttps: "18443"
+
+admin:
+  existingSecret: pihole-password
+
+serviceWeb:                                                                                                                                                                   http:                                                                                                                                                                         port: "18080"
+  https:                                                                                                                                                                        port: "18443"
+
+persistentVolumeClaim:
+  enabled: "true"
+
+podDnsConfig:
+  enabled: true
+  policy: "None"
+  nameservers:
+  - 127.0.0.1
+  - 1.1.1.1
+
+extraEnvVars:
+  TZ: "Europe/Warsaw"
+  DHCP_ACTIVE: "true"
+  DHCP_START: "192.168.1.10"
+  DHCP_END: "192.168.1.150"
+  DHCP_ROUTER: "192.168.1.1"
+  DHCP_rapid_commit: "true"
+  INTERFACE: "wlan0"
+  DNSMASQ_LISTENING: "single"
+  FTLCONF_LOCAL_IPV4: "127.0.0.1"
+  INTERFACE: "wlan0"
+  DNSMASQ_LISTENING: "single"
