@@ -10,6 +10,13 @@ webHttps: "18443"
 admin:
   existingSecret: pihole-password
 
+dnsmasq:
+  staticDhcpEntries:
+    - dhcp-host=2C:CF:67:14:09:52,192.168.1.11,rpi5-2
+    - dhcp-host=2C:CF:67:14:09:53,192.168.1.141,rpi5-2_wifi
+    - dhcp-host=D8:3A:DD:02:0E:47,192.168.1.142,rpi4-1_wifi
+    - dhcp-host=D8:3A:DD:02:0E:46,192.168.1.12,rpi4-1
+
 serviceWeb:
   http:
     port: "18080"
