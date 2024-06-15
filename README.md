@@ -1,2 +1,2 @@
-# pihole
-Pihole repository that acts as DNS and DHCP server in my home network
+# Description
+Repository with configuration regarding my local PiHole instance for management of DHCP in the network as well as DNS.
